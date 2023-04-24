@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div
+        class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gray-50 py-5 sm:py-10">
+
+
+        <div class="flex flex-col gap-2">
+            <!-- Modal toggle -->
+            <button data-modal-target="ModalDetailPerson" data-modal-toggle="ModalDetailPerson"
+                class="block text-white bg-[#F28b0c] hover:bg-orange-400 focus:ring-2 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                type="button">
+                Person
+            </button>
+            <button data-modal-target="ModalDetailPhoto" data-modal-toggle="ModalDetailPhoto"
+                class="block text-white bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                type="button">
+                Detail Photo
+            </button>
+        </div>
+
+        <!-- Main modal -->
+        <div id="ModalDetailPerson" tabindex="-1" aria-hidden="true"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-2xl dark:bg-gray-800 py-5">
+                    <button type="button"
+                        class="absolute top-5 right-5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center "
+                        data-modal-hide="ModalDetailPerson">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                    <!-- Modal body -->
+                    <div class="p-6 space-y-6 lg:w-10/12 mx-auto">
+                        <div class="md:flex items-start justify-center space-x-4">
+                            <div class="flex flex-col justify-center items-center">
+                                <img class="w-20 h-w-20 rounded-full" src="../assets/person.svg" alt="">
+                                <p class="font-semibold text-sm">625200</p>
+                            </div>
+                            <div class="flex flex-col items-center md:items-start gap-2">
+                                <div class="font-medium dark:text-white text-center md:text-left">
+                                    <div class="sm:text-md lg: text-xl font-bold text-gray-800 dark:text-gray-400">Betty
+                                        Veronica Murguia Gonzales
+                                    </div>
+                                </div>
+                                <div class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-5 h-5 rounded-full border p-[3px] text-[#F28b0c] border-[#F28b0c]">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                    </svg>
+                                    <p class="text-[#969595] text-sm">juan.serrudo@fiscalia.go.bo</p>
+                                </div>
+                                <div class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-5 h-5 rounded-full border p-[3px] text-[#F28b0c] border-[#F28b0c]">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                    </svg>
+
+                                    <p class="text-[#969595] text-sm">72890159</p>
+                                </div>
+                                <div class="flex gap-2 items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-5 h-5 rounded-full border p-[2px] text-[#F28b0c] border-[#F28b0c]">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+                                    </svg>
+
+
+
+                                    <p class="text-[#969595] text-sm">Calle Independecia 120, Barrio Yurac Yurac, Sucre,
+                                        Bolivia
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex md:flex-row gap-3 justify-center">
+                        <div class="flex items-center">
+                            <input checked id="radio-1" type="radio" value="" name="radio"
+                                class="w-5 h-5 text-[#F28b0c] bg-transparent border border-[#F28b0c] focus:ring-orange-400 dark:focus:ring-orange-400  focus:ring-2">
+                            <label for="radio-1"
+                                class="ml-2 text-sm font-medium text-[#969595] dark:text-gray-300">Juridica</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="radio-2" type="radio" value="" name="radio"
+                                class="w-5 h-5 text-[#F28b0c] bg-transparent border border-[#F28b0c] focus:ring-orange-400 dark:focus:ring-orange-400  focus:ring-2">
+                            <label for="radio-2"
+                                class="ml-2 text-sm font-medium text-[#969595] dark:text-gray-300">Natural</label>
+                        </div>
+
+
+
+                    </div>
+                    <div class="flex flex-col gap-2 md:w-10/12 mx-auto text-[#969595] text-sm p-6">
+                        <div class="border relative my-3">
+                            <h3
+                                class="text-center absolute z-10 left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 bg-white px-3">
+                                Información
+                                Institucional
+                            </h3>
+                        </div>
+                        <div class="flex justify-center text-start">
+                            <div class="w-5/12">
+                                <p>NIT</p>
+                            </div>
+                            <div class="w-5/12">
+                                <p>1000399023</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center text-start">
+                            <div class="w-5/12">
+                                <p>Razon Social</p>
+                            </div>
+                            <div class="w-5/12">
+                                <p>Ministerio Público</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center text-start">
+                            <div class="w-5/12">
+                                <p>Unidad organizativa</p>
+                            </div>
+                            <div class="w-5/12">
+                                <p>Informática</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center text-start">
+                            <div class="w-5/12">
+                                <p>Nombre de cargo</p>
+                            </div>
+                            <div class="w-5/12">
+                                <p>Desarrollador de Sistemas</p>
+                            </div>
+                        </div>
+
+                        <div class="border mt-2 mb-4"></div>
+
+                        <div class="mb-3">
+                            <label for="success"
+                                class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">PIN</label>
+                            <input type="text" id="success"
+                                class="bg-transparent border border-[#F28b0c] text-gray-900  placeholder-green-700 dark:placeholder-gray-500 text-sm rounded-lg focus:ring-[#F28b0c] focus:border-[#F28b0c] block w-full p-2.5"
+                                placeholder="">
+                        </div>
+                        <div>
+                            <label for="error"
+                                class="block mb-2 text-sm font-medium text-red-700 dark:text-red-500">Confirmar
+                                PIN:</label>
+                            <input type="text" id="error"
+                                class="bg-transparent border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5"
+                                placeholder="Error input">
+                            <p class="mt-2 text-sm text-red-600 ">El <span class="font-bold">PIN</span>
+                                no coincide</p>
+                        </div>
+
+
+                        <div class="flex justify-center gap-5 md:gap-10 py-3">
+                            <button data-modal-target="ModalDetailPerson" data-modal-toggle="ModalDetailPerson"
+                                class="block text-[#969595] bg-transparent border border-[#969595] focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                type="button">
+                                Solicitar
+                            </button>
+                            <button data-modal-target="ModalDetailPerson" data-modal-toggle="ModalDetailPerson"
+                                class="block text-white bg-[#F28b0c] hover:bg-orange-400 focus:ring-2 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                type="button">
+                                Cancelar
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Main modal -->
+        <div id="ModalDetailPhoto" tabindex="-1" aria-hidden="true"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative w-full max-w-[80rem] max-h-full">
+                <button type="button"
+                    class="static lg:absolute mb-3 bottom-3 left-0 text-gray-400 bg-white hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center justify-center"
+                    data-modal-hide="ModalDetailPhoto">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="block w-full lg:flex gap-3">
+                    <div class="lg:w-3/12">
+                        <div class="flex flex-col gap-3">
+                            <div
+                                class="rounded-xl flex items-center justify-around gap-2 bg-white border border-[#F28b0c] px-3 py-2">
+                                <p>Lorem, ipsum dolor.</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width=".5" stroke="currentColor" class="w-8 h-8 font-light">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+
+                            </div>
+                            <div
+                                class="rounded-xl flex items-center justify-around gap-2 bg-white border border-[#F28b0c] px-3 py-2">
+                                <p>Lorem, ipsum dolor.</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width=".5" stroke="currentColor" class="w-8 h-8 font-light">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+
+                            </div>
+                            <div
+                                class="rounded-xl flex items-center justify-around gap-2 bg-white border border-[#F28b0c] px-3 py-2">
+                                <p>Lorem, ipsum dolor.</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width=".5" stroke="currentColor" class="w-8 h-8 font-light">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+
+                            </div>
+                            <div
+                                class="rounded-xl flex items-center justify-around gap-2 bg-white border border-[#F28b0c] px-3 py-2">
+                                <p>Lorem, ipsum dolor.</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width=".5" stroke="currentColor" class="w-8 h-8 font-light">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-6/12 my-3 lg:my-0 bg-white rounded-2xl h-full">
+                        <img src="../assets/detail.png" class="w-full h-full" alt="">
+                    </div>
+                    <div class="lg:w-3/12 lg:relative">
+                        <div class="flex flex-col justify-between min-h-full">
+                            <div class="flex flex-col gap-3">
+                                <h2 class="lg:absolute text-[#F28b0c] lg:-top-8 text-center lg:text-start font-bold ">
+                                    Signatarios
+                                    con ADSIB
+                                </h2>
+                                <div class="flex bg-white rounded-xl px-4 py-2 gap-2">
+                                    <div class="flex flex-col justify-center items-center">
+                                        <img class="w-10 h-w-10 rounded-full" src="../assets/person.svg" alt="">
+                                        <p class="text-xs">625200</p>
+                                    </div>
+                                    <div class="flex flex-col items-center md:items-start">
+                                        <div class="font-medium dark:text-white text-center md:text-left">
+                                            <div class="text-sm font-bold text-gray-800">
+                                                Betty
+                                                Veronica Murguia Gonzales
+                                            </div>
+                                        </div>
+                                        <p class="text-[#F28b0c] text-xs">Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="text-[#969595] text-xs">Lorem ipsum dolor.</p>
+
+                                    </div>
+                                </div>
+                                <div class="flex bg-white rounded-xl px-4 py-2 gap-2">
+                                    <div class="flex flex-col justify-center items-center">
+                                        <img class="w-10 h-w-10 rounded-full" src="../assets/person.svg" alt="">
+                                        <p class="text-xs">625200</p>
+                                    </div>
+                                    <div class="flex flex-col items-center md:items-start">
+                                        <div class="font-medium dark:text-white text-center md:text-left">
+                                            <div class="text-sm font-bold text-gray-800">
+                                                Betty
+                                                Veronica Murguia Gonzales
+                                            </div>
+                                        </div>
+                                        <p class="text-[#F28b0c] text-xs">Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="text-[#969595] text-xs">Lorem ipsum dolor.</p>
+
+                                    </div>
+                                </div>
+                                <div class="flex bg-white rounded-xl px-4 py-2 gap-2">
+                                    <div class="flex flex-col justify-center items-center">
+                                        <img class="w-10 h-w-10 rounded-full" src="../assets/person.svg" alt="">
+                                        <p class="text-xs">625200</p>
+                                    </div>
+                                    <div class="flex flex-col items-center md:items-start">
+                                        <div class="font-medium dark:text-white text-center md:text-left">
+                                            <div class="text-sm font-bold text-gray-800">
+                                                Betty
+                                                Veronica Murguia Gonzales
+                                            </div>
+                                        </div>
+                                        <p class="text-[#F28b0c] text-xs">Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="text-[#969595] text-xs">Lorem ipsum dolor.</p>
+
+                                    </div>
+                                </div>
+                                <div class="flex bg-white rounded-xl px-4 py-2 gap-2">
+                                    <div class="flex flex-col justify-center items-center">
+                                        <img class="w-10 h-w-10 rounded-full" src="../assets/person.svg" alt="">
+                                        <p class="text-xs">625200</p>
+                                    </div>
+                                    <div class="flex flex-col items-center md:items-start">
+                                        <div class="font-medium dark:text-white text-center md:text-left">
+                                            <div class="text-sm font-bold text-gray-800">
+                                                Betty
+                                                Veronica Murguia Gonzales
+                                            </div>
+                                        </div>
+                                        <p class="text-[#F28b0c] text-xs">Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="text-[#969595] text-xs">Lorem ipsum dolor.</p>
+
+                                    </div>
+                                </div>
+                                <div class="flex bg-white rounded-xl px-4 py-2 gap-2">
+                                    <div class="flex flex-col justify-center items-center">
+                                        <img class="w-10 h-w-10 rounded-full" src="../assets/person.svg" alt="">
+                                        <p class="text-xs">625200</p>
+                                    </div>
+                                    <div class="flex flex-col items-center md:items-start">
+                                        <div class="font-medium dark:text-white text-center md:text-left">
+                                            <div class="text-sm font-bold text-gray-800">
+                                                Betty
+                                                Veronica Murguia Gonzales
+                                            </div>
+                                        </div>
+                                        <p class="text-[#F28b0c] text-xs">Lorem ipsum dolor sit amet consectetur.</p>
+                                        <p class="text-[#969595] text-xs">Lorem ipsum dolor.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <button data-modal-target="ModalDetailPhoto" data-modal-toggle="ModalDetailPhoto"
+                                class="block mt-3 lg:mt-0 text-white bg-[#F28b0c] hover:bg-orange-400 focus:ring-2 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                type="button">
+                                Firmar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>
